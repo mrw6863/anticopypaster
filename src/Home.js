@@ -1,0 +1,104 @@
+import './css/Home.css';
+import { CenteredColumn } from "./StyleBlocks";
+import styled from "styled-components";
+import Styles from "./Styles";
+import React from 'react';
+
+
+const StyledHome = styled(CenteredColumn)`
+  ${Styles.pageSetup};
+  
+  #header{
+    h1{
+      ${Styles.header}
+      font-style: italic;
+    }
+  }
+  #buttons{
+    align: center;
+    padding: 0 12px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  
+  #btn{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+`;
+
+const Home = () => {
+    return(
+        <StyledHome>
+            {/* TITLE */}
+            <div>
+
+                <h1 className="projectName">AntiCopyPaster: Duplicate Code IntelliJ Plugin</h1>
+
+            </div>
+
+            {/* PROJECT INFORMATION */}
+            <div>
+
+                <h3 className="projectHeader">Project Information:</h3>
+
+                <h3>Sponsor:</h3>
+                <p><b>Organization:</b> Rochester Institute of Technology - Software Engineering Department</p>
+                <p><b>Primary Contact:</b> Mohamed Wiem Mkaouer: <a href="mailto: mwmvse@rit.edu">mwmvse@rit.edu</a></p>
+
+                <h3>Synopsis:</h3>
+                <p>The AntiCopyPaster is an IntelliJ Plugin originally created to encourage software developers to use the
+                    Refactor menu due to a lack of trust and use of the menu. The current implementation of the plug-in uses an
+                    AI model in order to decide if copy/pasted code is similar enough to other code within the file to be
+                    refactored out. This removes the developers from how the plug-in functions and can lead to a lack of trust
+                    in the pop-up that occurs. The goal of this senior project is to take the metrics currently passed into the
+                    AI model, condense them, and make them customizable and transparent. This should also have the effect of
+                    making the plug-in more lightweight then the current version. All of this code will be contained in a fork
+                    of the current AntiCopyPaster plug-in repo and the code will be entirely open source. The minimum viable
+                    product of this senior project is to have a fully functional menu for developers to use with this plug-in
+                    that allows them to adjust the sensitivity of the AntiCopyPaster, which will reduce the number of false
+                    positive flags. In addition, the stretch goal is to have the AntiCopyPaster search through the entire
+                    IntelliJ project rather than just a single file. These contributions shall encourage users to take the
+                    pop-ups more seriously and increase use of the refactoring tools available within IntelliJ.</p>
+
+            </div>
+
+
+            {/* TEAM INFORMATION */}
+            <div>
+
+                <h3 className="teamName">Team: The Extension She Told You Not To Worry About</h3>
+
+                <h4>Project Coach:</h4>
+                <p>Xueling Zhang: <a href="mailto: Xueling.Zhang@rit.edu">Xueling.Zhang@rit.edu</a></p>
+
+                <h4>Project Team:</h4>
+                <p><b>Payton Hall:</b> <i>Communications Lead</i> <a href="mailto: pch3549@rit.edu">pch3549@rit.edu</a></p>
+                <p><b>Trey Pachucki: </b> <i>Tech Lead</i> <a href="mailto: ttp2542@rit.edu">ttp2542@rit.edu</a></p>
+                <p><b>Tyler Pauly: </b> <i>SCRUM Manager</i> <a href="mailto: tap5136@rit.edu">tap5136@rit.edu</a></p>
+                <p><b>Morgan West: </b> <i>Website Manager</i> <a href="mailto: mrw6863@rit.edu">mrw6863@rit.edu</a></p>
+
+            </div>
+
+            {/* 4-UPS */}
+            <div>
+                <iframe
+                    className="iframe"
+                    title="4upsSheet"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwUW1pvRpaBHK7VIj1T3lb8gUuLP5H_sPo0sJJqc2v-sPiySbS7gCr67CPA1wPdfzu6yljXV-XVD4Q/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
+
+            {/* TIME TRACKING */}
+            <div>
+                <iframe
+                    className="iframe"
+                    title="timeTracking"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIMP93o2CP-uW7gx9CheG1uOw5a0c7KGeZpQZGhCAlzG0R0JgeHmGDFY8aDh4kkw2oMXo5TAHf5yqc/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
+        </StyledHome>
+    );
+}
+
+export default Home;
